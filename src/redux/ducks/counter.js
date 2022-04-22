@@ -25,10 +25,16 @@ export default (state = initialState, action) => {
         // if we have an increment action...
         case INCREMENT:
             // REMEMBER to spread the state (...state) so that the FULL state won't be overwritten/delete by the new state from count+1
-            return { ...state, count: state.count + 1 };
+            return { 
+                ...state, 
+                count: state.count + 1 
+            };
         // if we have a decrement action...
         case DECREMENT:
-            return { ...state, count: state.count - 1 };
+            return { 
+                ...state, 
+                count: state.count - 1 
+            };
         // a switch statement needs a default statement
         default:
             return state;

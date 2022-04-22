@@ -4,19 +4,21 @@ import Counter from "./Counter";
 import "./styles.css";
 
 export default function App() {
+  // get redux state via useSelector()
   const count = useSelector((state) => state.counter.count);
-  const voters = [
-    "Anthony Sistilli ",
-    "Bob Smith",
-    "Stephanie Foo",
-    "Kevin Ma"
+
+  const names = [
+    "John Smith",
+    "Samantha Groves",
+    "Josh Carter",
+    "Kevin Spacey"
   ];
   return (
     <div className="App">
       <h1>Redux made easy</h1>
       <h2> Total Votes: {count}</h2>
-      {voters.map((voter) => (
-        <Counter name={voter} />
+      {names.map((name) => (
+        <Counter name={name} />
       ))}
     </div>
   );
